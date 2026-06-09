@@ -26,27 +26,17 @@ def main():
 
         key_lst = pg.key.get_pressed()
 
-        mx=-1
-        my=0
-
-        #if key_lst[pg.K_UP]:
-         #   my-=1#上に進む
-        #if key_lst[pg.K_DOWN]:
-         #   my+=1#下に進む
-        #if key_lst[pg.K_LEFT]:
-         #   mx-=1#左に進む
-        #if key_lst[pg.K_RIGHT]:
-         #   mx+=2#右に進む
-        #kk_rct.move_ip(mx, my) 
-
+      
+        kk_rct.move_ip(-1,0) 
         if key_lst[pg.K_UP]:
             kk_rct.move_ip(0,-1)#上に進む
-        if key_lst[pg.K_UP]:
+        if key_lst[pg.K_DOWN]:
             kk_rct.move_ip(0,+1)#下に進む
-        if key_lst[pg.K_UP]:
+        if key_lst[pg.K_LEFT]:
             kk_rct.move_ip(-1,0)#左に進む
-        if key_lst[pg.K_UP]:
+        if key_lst[pg.K_RIGHT]:
             kk_rct.move_ip(+1,0)#右に進む
+
         x = tmr%3200
         screen.blit(bg_img, [-x, 0]) #5
         screen.blit(bg_img2, [-x+1600, 0]) #7
